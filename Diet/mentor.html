@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitBite - Our Mentors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #4ECDC4;
+            --accent-color: #FFD93D;
+            --text-color: #E0E0E0;
+            --bg-color: #121212;
+            --card-bg: #1E1E1E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem 0;
+        }
+
+        header {
+            background: rgba(18, 18, 18, 0.8);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            padding: 0 1rem;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .page-title {
+            text-align: center;
+            padding: 6rem 0 2rem;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+        }
+
+        .mentor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .mentor-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .mentor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+        }
+
+        .mentor-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .mentor-card:hover .mentor-image {
+            transform: scale(1.05);
+        }
+
+        .mentor-info {
+            padding: 1.5rem;
+        }
+
+        .mentor-name {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .mentor-title {
+            color: var(--secondary-color);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .mentor-bio {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .mentor-specialties {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .mentor-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">NutriGuide</div>
+            <ul class="nav-links">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="mentor.html">Mentors</a></li>
+                <li><a href="signup.html">Sign up</a></li>
+                <li><a href="login.html">Sign in</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="page-title"></h1>
+        <div class="container">
+            <div class="mentor-grid">
+                <div class="mentor-card">
+                    <img src="image/f1.jpg" alt="Dr. Emily Chen" class="mentor-image">
+                    <div class="mentor-info">
+                        <h2 class="mentor-name">Dr. Emily Chen</h2>
+                        <p class="mentor-title">Nutritionist & Dietitian</p>
+                        <p class="mentor-bio">Dr. Chen specializes in creating personalized nutrition plans for weight management and chronic disease prevention.</p>
+                        <p class="mentor-specialties">Specialties: Weight Loss, Diabetes Management</p>
+                    </div>
+                </div>
+                <div class="mentor-card">
+                    <img src="image/m1.jpg" alt="Mark Johnson" class="mentor-image">
+                    <div class="mentor-info">
+                        <h2 class="mentor-name">Mark Johnson</h2>
+                        <p class="mentor-title">Fitness Trainer & Nutrition Coach</p>
+                        <p class="mentor-bio">Mark combines fitness training with nutrition coaching to help clients achieve their body composition goals.</p>
+                        <p class="mentor-specialties">Specialties: Body Transformation, Sports Nutrition</p>
+                    </div>
+                </div>
+                <div class="mentor-card">
+                    <img src="image/medium-shot-smiley-doctor-with-crossed-arms.jpg" alt="Sarah Williams" class="mentor-image">
+                    <div class="mentor-info">
+                        <h2 class="mentor-name">Sarah Williams</h2>
+                        <p class="mentor-title">Registered Dietitian</p>
+                        <p class="mentor-bio">Sarah focuses on plant-based nutrition and helps clients transition to a healthier, more sustainable diet.</p>
+                        <p class="mentor-specialties">Specialties: Vegan Nutrition, Gut Health</p>
+                    </div>
+                </div>
+                <div class="mentor-card">
+                    <img src="image/smiling-male-happy-doctor-offering-apple-broccoli.jpg" alt="Chef Alex Moreno" class="mentor-image">
+                    <div class="mentor-info">
+                        <h2 class="mentor-name">Chef Alex Moreno</h2>
+                        <p class="mentor-title">Culinary Nutrition Expert</p>
+                        <p class="mentor-bio">Chef Alex combines culinary expertise with nutritional science to create delicious, health-optimized recipes.</p>
+                        <p class="mentor-specialties">Specialties: Recipe Development, Culinary Medicine</p>
+                    </div>
+                </div>
+                <div class="mentor-card">
+                    <img src="image/woman-doctor-wearing-lab-coat-with-stethoscope-isolated (1).jpg" alt="Lisa Patel" class="mentor-image">
+                    <div class="mentor-info">
+                        <h2 class="mentor-name">Lisa Patel</h2>
+                        <p class="mentor-title">Yoga Instructor & Holistic Nutritionist</p>
+                        <p class="mentor-bio">Lisa integrates yoga practices with holistic nutrition principles to promote overall wellness and balance.</p>
+                        <p class="mentor-specialties">Specialties: Mindful Eating, Stress Management</p>
+                    </div>
+                </div>
+                <div class="mentor-card">
+                    <img src="image/pleased-young-female-doctor-wearing-medical-robe-stethoscope-around-neck-standing-with-closed-posture (1).jpg" alt="Dr. Michael Thompson" class="mentor-image">
+                    <div class="mentor-info">
+                        <h2 class="mentor-name">Dr. Michael Thompson</h2>
+                        <p class="mentor-title">Sports Nutritionist</p>
+                        <p class="mentor-bio">Dr. Thompson specializes in optimizing athletic performance through advanced nutritional strategies.</p>
+                        <p class="mentor-specialties">Specialties: Performance Nutrition, Recovery Optimization</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
